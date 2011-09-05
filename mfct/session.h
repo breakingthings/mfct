@@ -55,6 +55,9 @@ public:
 			this->_MapResultColumnsToObject(objPtr.get(), statement);
 		}
 
+		sqlite3_reset(statement);
+		sqlite3_finalize(statement);
+
 		return objPtr;
 	}
 
