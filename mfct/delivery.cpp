@@ -18,6 +18,7 @@ Delivery::~Delivery(void)
 
 Delivery &Delivery::operator =(const Delivery &other)
 {
+	ObjectBase::operator=(other);
 	if(this != &other)
 	{
 		this->name = other.name;

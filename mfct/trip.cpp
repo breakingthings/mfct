@@ -23,6 +23,7 @@ Trip::~Trip(void)
 
 Trip &Trip::operator =(const Trip &other)
 {
+	ObjectBase::operator=(other);
 	if(this != &other)
 	{
 		this->id = other.id;

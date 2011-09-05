@@ -26,6 +26,7 @@ public:
 	//Gets the object map
 	virtual const VarInfoMap &GetMap() const = 0;
 	const CString &GetTableName() const;
+	ObjectBase &operator =(const ObjectBase&);
 	bool IsNull();
 protected:	
 	//contains map of sql result field names to object variable pointers

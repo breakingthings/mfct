@@ -20,6 +20,7 @@ Customer::~Customer(void)
 
 Customer &Customer::operator =(const Customer &other)
 {
+	ObjectBase::operator=(other);
 	if(this != &other)
 	{
 		this->id = other.id;

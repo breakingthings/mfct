@@ -20,3 +20,12 @@ bool ObjectBase::IsNull()
 	return this->m_is_null;
 }
 
+ObjectBase &ObjectBase::operator =(const ObjectBase& other)
+{
+	if(this != &other)
+	{
+		this->m_is_null = other.m_is_null;
+	}
+
+	return *this;
+}

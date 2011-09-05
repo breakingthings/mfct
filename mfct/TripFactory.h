@@ -13,6 +13,8 @@ public:
 	static shared_ptr<Trip> AddTrip();
 	static shared_ptr<vector<Trip> > GetAllTrips();
 	static shared_ptr<Trip> GetById(int id);
+private:
+	TripFactory &operator=(TripFactory const &);
 };
 
 #endif
