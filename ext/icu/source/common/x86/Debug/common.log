@@ -1,1 +1,343 @@
-﻿
+﻿  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+          1 file(s) copied.
+  ubidi.c
+  ubidi_props.c
+  ubidiln.c
+  ubidiwrt.c
+  ushape.c
+  propsvec.c
+  uarrsort.c
+  uenum.c
+  uhash.c
+  ulist.c
+  utrie.c
+  utrie2_builder.c
+  icudataver.c
+  umath.c
+  utrace.c
+  utypes.c
+  ucnv.c
+  ucnv2022.c
+  ucnv_bld.c
+  ucnv_cb.c
+  ucnv_cnv.c
+  ucnv_ct.c
+  ucnv_err.c
+  ucnv_ext.c
+  ucnv_io.c
+  ucnv_lmb.c
+  ucnv_set.c
+  ucnv_u16.c
+  ucnv_u32.c
+  ucnv_u7.c
+  ucnv_u8.c
+  ucnvbocu.c
+  ucnvdisp.c
+  ucnvhz.c
+  ucnvisci.c
+  ucnvlat1.c
+  ucnvmbcs.c
+  ucnvscsu.c
+  cmemory.c
+  ucmndata.c
+  udatamem.c
+  udataswp.c
+  uinit.c
+  ustrfmt.c
+  punycode.c
+  ucat.c
+  uloc.c
+  uloc_tag.c
+  ures_cnv.c
+  uresbund.c
+  uresdata.c
+  unorm_it.c
+  ucase.c
+  uchar.c
+  unames.c
+  usc_impl.c
+  uscript.c
+  icuplug.c
+  cstring.c
+  cwchar.c
+  ucasemap.c
+  uinvchar.c
+  ustr_cnv.c
+  ustr_wcs.c
+  ustrcase.c
+  ustring.c
+  ustrtrns.c
+  utf_impl.c
+  brkeng.cpp
+  brkiter.cpp
+  dictbe.cpp
+  rbbi.cpp
+  rbbidata.cpp
+  rbbinode.cpp
+  rbbirb.cpp
+  rbbiscan.cpp
+  rbbisetb.cpp
+  rbbistbl.cpp
+  rbbitblb.cpp
+  triedict.cpp
+  ubrk.cpp
+  uhash_us.cpp
+  ustack.cpp
+  ustrenum.cpp
+  utrie2.cpp
+  uvector.cpp
+  uvectr32.cpp
+  uvectr64.cpp
+  errorcode.cpp
+  mutex.cpp
+  ucnvsel.cpp
+  udata.cpp
+  uobject.cpp
+  dtintrv.cpp
+  parsepos.cpp
+  util.cpp
+  util_props.cpp
+  uidna.cpp
+  uts46.cpp
+  locavailable.cpp
+  locbased.cpp
+  locdispnames.cpp
+  locid.cpp
+  loclikely.cpp
+  locresdata.cpp
+  locutil.cpp
+  resbund.cpp
+  resbund_cnv.cpp
+  caniter.cpp
+  filterednormalizer2.cpp
+  normalizer2.cpp
+  normalizer2impl.cpp
+  normlzr.cpp
+  unorm.cpp
+  unormcmp.cpp
+  bmpset.cpp
+  patternprops.cpp
+  propname.cpp
+  ruleiter.cpp
+  unifilt.cpp
+  unifunct.cpp
+  uniset.cpp
+  uniset_props.cpp
+  unisetspan.cpp
+  uprops.cpp
+  uset.cpp
+  uset_props.cpp
+  usetiter.cpp
+  serv.cpp
+  servlk.cpp
+  servlkf.cpp
+  servls.cpp
+  servnotf.cpp
+  servrbf.cpp
+  servslkf.cpp
+  usprep.cpp
+  appendable.cpp
+  bytestream.cpp
+  bytestrie.cpp
+  bytestriebuilder.cpp
+  bytestrieiterator.cpp
+  chariter.cpp
+  charstr.cpp
+  messagepattern.cpp
+  schriter.cpp
+  stringpiece.cpp
+  stringtriebuilder.cpp
+  ucharstrie.cpp
+  ucharstriebuilder.cpp
+  ucharstrieiterator.cpp
+  uchriter.cpp
+  uiter.cpp
+  unistr.cpp
+  unistr_case.cpp
+  unistr_cnv.cpp
+  unistr_props.cpp
+  utext.cpp
+  ucol_swp.cpp
+  locmap.c
+  putil.c
+  umutex.c
+  wintz.c
+  ucln_cmn.c
+  umapfile.c
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(D:\Projects\mfct\ext\icu\source\common\common.dll) does not match the Linker's OutputFile property value (D:\Projects\mfct\ext\icu\bin\icuuc48d.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(common) does not match the Linker's OutputFile property value (icuuc48d). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     Creating library ..\..\lib\icuucd.lib and object ..\..\lib\icuucd.exp
+  common.vcxproj -> D:\Projects\mfct\ext\icu\source\common\common.dll

@@ -43,7 +43,7 @@ public:
 	void ClearParams();
 	
 	template <typename T>
-	typename std::enable_if<std::is_base_of<ObjectBase, T>::value, shared_ptr<T>>::type 
+	typename std::enable_if<std::is_base_of<ObjectBase, T>::value, shared_ptr<T> >::type 
 	Get()
 	{
 		sqlite3_stmt *statement = this->_PrepareAndBind();

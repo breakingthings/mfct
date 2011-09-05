@@ -1,1 +1,302 @@
-﻿
+﻿  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  Performing Custom Build Tools
+          1 file(s) copied.
+  alphaindex.cpp
+  bms.cpp
+  bmsearch.cpp
+  bocsu.cpp
+  coleitr.cpp
+  coll.cpp
+  colldata.cpp
+  search.cpp
+  sortkey.cpp
+  stsearch.cpp
+  tblcoll.cpp
+  tzfmt.cpp
+  tzgnames.cpp
+  tznames.cpp
+  tznames_impl.cpp
+  ucol.cpp
+  ucol_bld.cpp
+  ucol_cnt.cpp
+  ucol_elm.cpp
+  ucol_res.cpp
+  ucol_sit.cpp
+  ucol_tok.cpp
+  ucol_wgt.cpp
+  ucoleitr.cpp
+  usearch.cpp
+  astro.cpp
+  basictz.cpp
+  buddhcal.cpp
+  calendar.cpp
+  cecal.cpp
+  chnsecal.cpp
+  choicfmt.cpp
+  coptccal.cpp
+  curramt.cpp
+  currfmt.cpp
+  currpinf.cpp
+  currunit.cpp
+  datefmt.cpp
+  dcfmtsym.cpp
+  decfmtst.cpp
+  decimfmt.cpp
+  digitlst.cpp
+  dtfmtsym.cpp
+  dtitvfmt.cpp
+  dtitvinf.cpp
+  dtptngen.cpp
+  dtrule.cpp
+  ethpccal.cpp
+  fmtable.cpp
+  fmtable_cnv.cpp
+  format.cpp
+  fphdlimp.cpp
+  fpositer.cpp
+  gregocal.cpp
+  gregoimp.cpp
+  hebrwcal.cpp
+  indiancal.cpp
+  islamcal.cpp
+  japancal.cpp
+  locdspnm.cpp
+  measfmt.cpp
+  measure.cpp
+  msgfmt.cpp
+  nfrs.cpp
+  nfrule.cpp
+  nfsubs.cpp
+  numfmt.cpp
+  numsys.cpp
+  olsontz.cpp
+  persncal.cpp
+  plurfmt.cpp
+  plurrule.cpp
+  rbnf.cpp
+  rbtz.cpp
+  reldtfmt.cpp
+  selfmt.cpp
+  simpletz.cpp
+  smpdtfmt.cpp
+  smpdtfst.cpp
+  taiwncal.cpp
+  timezone.cpp
+  tmunit.cpp
+  tmutamt.cpp
+  tmutfmt.cpp
+  tzrule.cpp
+  tztrans.cpp
+  ucal.cpp
+  ucurr.cpp
+  udat.cpp
+  udateintervalformat.cpp
+  udatpg.cpp
+  umsg.cpp
+  unum.cpp
+  upluralrules.cpp
+  vtzone.cpp
+  vzone.cpp
+  zonemeta.cpp
+  zrule.cpp
+  ztrans.cpp
+  regexcmp.cpp
+  regexst.cpp
+  regextxt.cpp
+  rematch.cpp
+  repattrn.cpp
+  uregex.cpp
+  uregexc.cpp
+  anytrans.cpp
+  brktrans.cpp
+  casetrn.cpp
+  cpdtrans.cpp
+  esctrn.cpp
+  funcrepl.cpp
+  name2uni.cpp
+  nortrans.cpp
+  nultrans.cpp
+  quant.cpp
+  rbt.cpp
+  rbt_data.cpp
+  rbt_pars.cpp
+  rbt_rule.cpp
+  rbt_set.cpp
+  remtrans.cpp
+  strmatch.cpp
+  strrepl.cpp
+  titletrn.cpp
+  tolowtrn.cpp
+  toupptrn.cpp
+  translit.cpp
+  transreg.cpp
+  tridpars.cpp
+  unesctrn.cpp
+  uni2name.cpp
+  utrans.cpp
+  csdetect.cpp
+  csmatch.cpp
+  csr2022.cpp
+  csrecog.cpp
+  csrmbcs.cpp
+  csrsbcs.cpp
+  csrucode.cpp
+  csrutf8.cpp
+  inputext.cpp
+  ucsdet.cpp
+  uspoof.cpp
+  uspoof_build.cpp
+  uspoof_conf.cpp
+  uspoof_impl.cpp
+  uspoof_wsconf.cpp
+  decContext.c
+  decNumber.c
+  ulocdata.c
+  utmscale.c
+  windtfmt.cpp
+  winnmfmt.cpp
+  wintzimpl.cpp
+  ucln_in.c
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(D:\Projects\mfct\ext\icu\source\i18n\.\..\..\lib\i18n.dll) does not match the Linker's OutputFile property value (D:\Projects\mfct\ext\icu\bin\icuin48d.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(i18n) does not match the Linker's OutputFile property value (icuin48d). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     Creating library ..\..\lib\icuind.lib and object ..\..\lib\icuind.exp
+  i18n.vcxproj -> D:\Projects\mfct\ext\icu\source\i18n\.\..\..\lib\i18n.dll

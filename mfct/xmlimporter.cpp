@@ -82,6 +82,7 @@ XMLImporter::XMLImporter(const CString &file) : m_hasError(false)
 	this->ParseFile();
 }
 
+
 bool XMLImporter::ParseFile()
 {
 	try
@@ -89,6 +90,7 @@ bool XMLImporter::ParseFile()
 		xercesc::XMLPlatformUtils::Initialize();
 	} catch (const xercesc::XMLException &ex)
 	{
+		throw(ex.getMessage());
 	}
 	
 
@@ -201,6 +203,9 @@ const void *XMLImporter::GetXMLSchema(DWORD *sizePtr)
 					return pLockedResource;
 				}
 			}
+			return NULL;
 		}
+		return NULL;
 	}
+	return NULL;
 }

@@ -19,7 +19,6 @@ private:
 	CString m_xml_file;
 	const void *GetXMLSchema(DWORD*);
 	bool ParseFile();
-	//HMODULE GetCurrentModule(void);
 };
 
 #endif
