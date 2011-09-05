@@ -54,6 +54,9 @@
     <ClCompile Include="customerfactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="maindialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -93,6 +96,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="customerfactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="maindialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

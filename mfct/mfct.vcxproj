@@ -93,6 +93,7 @@
     <ClCompile Include="delivery.cpp" />
     <ClCompile Include="deliveryfactory.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="maindialog.cpp" />
     <ClCompile Include="objectbase.cpp" />
     <ClCompile Include="Param.cpp" />
     <ClCompile Include="session.cpp" />
@@ -107,6 +108,7 @@
     <ClInclude Include="customerfactory.h" />
     <ClInclude Include="delivery.h" />
     <ClInclude Include="deliveryfactory.h" />
+    <ClInclude Include="maindialog.h" />
     <ClInclude Include="objectbase.h" />
     <ClInclude Include="Param.h" />
     <ClInclude Include="resource.h" />
