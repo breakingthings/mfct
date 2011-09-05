@@ -296,7 +296,6 @@
   winnmfmt.cpp
   wintzimpl.cpp
   ucln_in.c
-C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(D:\Projects\mfct\ext\icu\source\i18n\.\..\..\lib\i18n.dll) does not match the Linker's OutputFile property value (D:\Projects\mfct\ext\icu\bin\icuin48d.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
-C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(i18n) does not match the Linker's OutputFile property value (icuin48d). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(D:\Projects\mfct\ext\icu\source\i18n\icuin48d.dll) does not match the Linker's OutputFile property value (D:\Projects\mfct\Debug\icuin48d.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
      Creating library ..\..\lib\icuind.lib and object ..\..\lib\icuind.exp
-  i18n.vcxproj -> D:\Projects\mfct\ext\icu\source\i18n\.\..\..\lib\i18n.dll
+  i18n.vcxproj -> D:\Projects\mfct\ext\icu\source\i18n\icuin48d.dll

@@ -89,9 +89,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="customer.cpp" />
+    <ClCompile Include="customerfactory.cpp" />
     <ClCompile Include="delivery.cpp" />
     <ClCompile Include="deliveryfactory.cpp" />
-    <ClCompile Include="FactoryBase.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="objectbase.cpp" />
     <ClCompile Include="Param.cpp" />
@@ -104,9 +104,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="customer.h" />
+    <ClInclude Include="customerfactory.h" />
     <ClInclude Include="delivery.h" />
     <ClInclude Include="deliveryfactory.h" />
-    <ClInclude Include="FactoryBase.h" />
     <ClInclude Include="objectbase.h" />
     <ClInclude Include="Param.h" />
     <ClInclude Include="resource.h" />

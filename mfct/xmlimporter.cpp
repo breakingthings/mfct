@@ -1,14 +1,15 @@
-#include "xmlimporter.h"
 #include <xercesc/util/PlatformUtils.hpp>
 #include <xercesc/parsers/XercesDOMParser.hpp>
-#include <xercesc/dom/DOM.hpp>
 #include <xercesc/sax/HandlerBase.hpp>
 #include <xercesc/util/XMLString.hpp>
 #include <xercesc/util/PlatformUtils.hpp>
 #include <xercesc/framework/LocalFileInputSource.hpp>
 #include <xercesc/framework/MemBufInputSource.hpp>
 #include <xercesc/util/XMLUni.hpp>
+#include "xmlimporter.h"
 #include "TripFactory.h"
+#include "CustomerFactory.h"
+#include "DeliveryFactory.h"
 
 class XErrorHandler : public xercesc::ErrorHandler
 {
@@ -72,12 +73,10 @@ XMLImporter::~XMLImporter(void)
 void XMLImporter::LoadData(const CString &file)
 {
 	XMLImporter xi(file);
-
 }
 
 XMLImporter::XMLImporter(const CString &file) : m_hasError(false)
 {
-	//const void *schemaData = this->GetXMLSchema();
 	this->m_xml_file = file;
 	this->ParseFile();
 }
@@ -97,7 +96,7 @@ bool XMLImporter::ParseFile()
 	XErrorHandler e_handler;
 
 	xercesc::XercesDOMParser *parser = new xercesc::XercesDOMParser();
-	//IMPORTANT !!!! - COSTS HOURS OF WORK FOR "!#¤%¤"#%"#¤" SAKE
+	//NEXT ONE IS IMPORTANT !!!! - COSTS HOURS OF WORK FOR !#¤%¤"#%"#¤ SAKE
 	parser->setIncludeIgnorableWhitespace(false);
 	parser->setValidationScheme(xercesc::XercesDOMParser::Val_Always);
 	parser->setLoadExternalDTD(false);
@@ -120,17 +119,25 @@ bool XMLImporter::ParseFile()
 		throw(e_handler.getErrorMessage());
 		return false;
 	}
-
-	
-	
 	
 	xercesc::DOMDocument *doc = parser->getDocument();	
+	this->ParseAndStoreItems(doc);
+	
+	parser->resetDocumentPool();
 
 	
+	delete parser;
+	
+	
+	return true;
+	
+	
+}
+
+void XMLImporter::ParseAndStoreItems(xercesc::DOMDocument *doc) const
+{
 	xercesc::DOMElement *el = doc->getDocumentElement();
 	xercesc::DOMNode *nod = el->getChildNodes()->item(0);
-	
-	
 	
 	CString customer_name, customer_address, d_name, d_unit;
 	int d_quantity;
@@ -141,11 +148,13 @@ bool XMLImporter::ParseFile()
 	xercesc::DOMNode *delivery;
 	xercesc::DOMNode *delivery_item;
 	do{
+		shared_ptr<Trip> t = TripFactory::AddTrip();
 		delivery = trip->getFirstChild();
 		do{
 			customer_name = delivery->getAttributes()->getNamedItem(_T("customer_name"))->getTextContent();
 			customer_address = delivery->getAttributes()->getNamedItem(_T("address"))->getTextContent();
 			delivery_item = delivery->getFirstChild();
+
 			do{
 				node = delivery_item->getFirstChild();
 				d_name = node->getTextContent();
@@ -161,7 +170,11 @@ bool XMLImporter::ParseFile()
 
 				node = node->getNextSibling();
 				d_total = _tstof(node->getTextContent());
-
+				
+				//Store to DB
+				
+				this->StoreDelivery(t, customer_name, customer_address, d_name, d_unit, d_quantity,
+					d_price, d_total);
 				
 
 			} while((delivery_item = delivery_item->getNextSibling()) != NULL);
@@ -169,18 +182,13 @@ bool XMLImporter::ParseFile()
 		} while((delivery = delivery->getNextSibling()) != NULL);
 
 	} while((trip = trip->getNextSibling()) != NULL);
+}
 
-	
-	//doc->release();	
-	parser->resetDocumentPool();
-
-	
-	delete parser;
-	
-	
-	return true;
-	
-	
+void XMLImporter::StoreDelivery(shared_ptr<Trip> trip,const CString &customer_name, const CString &customer_address, 
+		const CString &name, const CString &unit, int quantity, double price, double total) const
+{
+	shared_ptr<Customer> c = CustomerFactory::AddOrGetCustomer(customer_name, customer_address);
+	DeliveryFactory::AddDelivery(trip, c, name, unit, quantity, price, total);
 }
 
 const void *XMLImporter::GetXMLSchema(DWORD *sizePtr)

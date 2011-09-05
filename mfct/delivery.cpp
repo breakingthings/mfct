@@ -9,9 +9,6 @@ Delivery::Delivery(void)
 {
 	MAPTABLE("trip");
 	MAPCOLUMN("id", &id, VarInfo::INT);
-	/*MAPCOLUMN("customer_name", &customer_name, VarInfo::STRING);
-	MAPCOLUMN("address", &address, VarInfo::INT);*/
-	
 }
 
 

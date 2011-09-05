@@ -1,21 +1,31 @@
-#include "stdafx.h"
-#include "resource.h"
-#include "TripFactory.h"
-#include "xmlimporter.h"
+#include <SDKDDKVer.h>
+#ifndef _UNICODE
+#define _UNICODE
+#endif
 
+#ifndef _UNICODE
+#define _AFXDLL
+#endif
+
+#include <afx.h>
+#include <afxext.h>
+#include <afxwin.h>
+#include <afxdisp.h>
+#include <afxcontrolbars.h>
+#include <afxdtctl.h>   
 
 #include <map>
 #include <vector>
-namespace MSXML
-{
-#include <MsXml2.h>
-}
-//#import <msxml4.dll>
+#include "resource.h"
+#include "tripfactory.h"
+#include "xmlimporter.h"
+#include "deliveryfactory.h"
+
+using namespace std;
 
 class MainDialog : public CDialogEx
 {
 private:
-	//CMenu m_wndMainMenu;
 	CStatic m_versionString;
 	CComboBox m_Combo;
 
@@ -31,6 +41,7 @@ public:
 	{
 		CDialogEx::OnInitDialog();
 		std::shared_ptr<Trip> trip = TripFactory::AddTrip();
+		
 		this->InitColumns();
 		this->BindTrips();
 		return TRUE;
@@ -49,14 +60,7 @@ public:
 	}
 
 
-	/*void OnSysCommand(UINT nID, LPARAM lParam)
-	{
-
-		if((nID & 0xFFF0) == SC_CLOSE)
-		{
-		}
-	}*/
-
+	
 	void InitColumns()
 	{
 		int result = 0;
@@ -112,6 +116,17 @@ public:
 	DECLARE_MESSAGE_MAP();
 	afx_msg void OnCbnSelendokCombo1();
 	afx_msg void OnFileImport();
+	
+	void ShowTripDeliveries(int trip_id)
+	{
+		shared_ptr<Trip> trip = TripFactory::GetById(trip_id);
+		if(!trip->IsNull())
+		{
+			shared_ptr<vector<Delivery> > deliveries = DeliveryFactory::GetDeliveries(trip_id);
+		}
+	}
+	
+	
 };
 
 
@@ -126,12 +141,8 @@ void MainDialog::OnCbnSelendokCombo1()
 {
 	CComboBox *cb = (CComboBox*)this->GetDlgItem(IDC_COMBO_TRIPS);
 	int selectedIndex = cb->GetCurSel();
-	int tripIndex = this->m_vector_combo_ids.at(selectedIndex);
-	CString cs;
-	
-	cs.Format(_T("%d"), tripIndex);
-
-	this->GetDlgItem(IDC_TRIPID)->SetWindowText(cs);
+	int trip_id = this->m_vector_combo_ids.at(selectedIndex);
+	this->ShowTripDeliveries(trip_id);
 }
 
 
@@ -160,14 +171,29 @@ class MyApp : public CWinApp
 public:
 	BOOL InitInstance()
 	{
+		this->InitTables();
 		MainDialog dlg;
 		m_pMainWnd = &dlg;
 		dlg.DoModal();
-
-		//this->m_pMainWnd = wnd;
-
-		//this->m_pMainWnd->ShowWindow(SW_SHOW);
 		return TRUE;
+	}
+	
+	void InitTables()
+	{
+		
+		Session sess;
+		sess << _T("CREATE TABLE IF NOT EXISTS trips (id INTEGER PRIMARY KEY ASC AUTOINCREMENT, deleted BOOLEAN)");
+		sess.Execute();
+		sess.ClearParams();
+		sess << _T("CREATE TABLE IF NOT EXISTS customers (id INTEGER PRIMARY KEY ASC AUTOINCREMENT")
+			_T(",name TEXT NOT NULL, address TEXT NOT NULL)");
+		sess.Execute();
+		
+		sess << _T("CREATE TABLE IF NOT EXISTS deliveries (id INTEGER PRIMARY KEY ASC AUTOINCREMENT")
+			_T(",trip_id INTEGER NOT NULL, customer_id INTEGER NOT NULL")
+			_T(",name TEXT NOT NULL, unit TEXT NOT NULL")
+			_T(",quantity INTEGER NOT NULL, price REAL, total REAL NOT NULL)");
+		sess.Execute();
 	}
 };
 

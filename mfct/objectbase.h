@@ -1,12 +1,12 @@
 #ifndef _OBJECTBASE_H
 #define _OBJECTBASE_H
 
-#include "varinfo.h"
 #include <afxtempl.h>
 #include <afxcoll.h>
 #include <memory>
 #include <cstring>
 #include <unordered_map>
+#include "varinfo.h"
 
 using namespace std;
 
@@ -18,18 +18,20 @@ typedef CMap<CString, const TCHAR*, VarInfo, VarInfo&> VarInfoMap;
 
 class ObjectBase
 {
-
+	
 public:
+	friend class Session;
 	ObjectBase(void);
 	virtual ~ObjectBase(void);
 	//Gets the object map
 	virtual const VarInfoMap &GetMap() const = 0;
 	const CString &GetTableName() const;
-
+	bool IsNull();
 protected:	
 	//contains map of sql result field names to object variable pointers
 	VarInfoMap  m_varmap;
 	CString m_table_name;
+	bool m_is_null;
 };
 
 #endif

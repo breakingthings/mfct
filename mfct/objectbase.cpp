@@ -2,7 +2,7 @@
 
 ObjectBase::ObjectBase(void)
 {
-	
+	m_is_null = true;
 }
 
 
@@ -14,3 +14,9 @@ const CString &ObjectBase::GetTableName() const
 {
 	return this->m_table_name;
 }
+
+bool ObjectBase::IsNull()
+{
+	return this->m_is_null;
+}
+

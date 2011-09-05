@@ -1,12 +1,11 @@
 #ifndef _SESSION_H
 #define _SESSION_H
-#include "stdafx.h"
 #include <vector>
 #include <list>
-#include "Param.h"
-#include "objectbase.h"
 #include <sqlite3.h>
 #include <type_traits>
+#include "objectbase.h"
+#include "Param.h"
 #include "objectbase.h"
 
 using namespace std;
@@ -41,7 +40,8 @@ public:
 	Session &operator <<(const Param &parameter);
 	void Execute();
 	void ClearParams();
-	
+	int GetInt();
+
 	template <typename T>
 	typename std::enable_if<std::is_base_of<ObjectBase, T>::value, shared_ptr<T> >::type 
 	Get()
@@ -61,10 +61,11 @@ public:
 		return objPtr;
 	}
 
+	
 	template <typename T>
-	shared_ptr<std::vector<T> > ExecAndFetch()
+	typename enable_if<is_base_of<ObjectBase, T>::value, shared_ptr<vector<T> > >::type 
+	ExecAndFetch()
 	{
-		//ASSERT((ObjectBase*)&T);
 		int result;
 		shared_ptr<vector<T> > resultVector(new vector<T>);
 
@@ -78,11 +79,6 @@ public:
 
 			if (result == SQLITE_ROW) {
 
-				/*if(is_first_result)
-				{
-					//cols = sqlite3_column_count(statement);	
-					is_first_result = false;
-				}*/
 
 				ObjectBase* oPtr(new T);
 				_MapResultColumnsToObject(oPtr, statement);
@@ -97,7 +93,7 @@ public:
 				break;
 			} else 
 			{
-				HandleResult(result);
+				_HandleResult(result);
 			}
 		}
 
@@ -115,8 +111,8 @@ private:
 	Session &operator=(Session const &);
 	list<Param> m_list_parameters;
 	CString m_statement;
-	void BindParameter(sqlite3_stmt *statement, const Param &param, int position);
-	void HandleResult(int result_code) const;
+	void _BindParameter(sqlite3_stmt *statement, const Param &param, int position);
+	void _HandleResult(int result_code) const;
 	sqlite3 *m_dbHandle;
 	bool m_handle_open;
 };

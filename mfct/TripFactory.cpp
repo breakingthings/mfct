@@ -13,11 +13,8 @@ TripFactory::~TripFactory(void)
 
 shared_ptr<Trip> TripFactory::AddTrip()
 {	
-	Session sess;
-	sess << _T("CREATE TABLE IF NOT EXISTS trips (id INTEGER PRIMARY KEY ASC AUTOINCREMENT, deleted BOOLEAN)");
-	sess.Execute();
-	sess.ClearParams();
-		
+	
+	Session sess;	
 	sess << _T("INSERT INTO trips (deleted) VALUES (?)") << Param(0);
 	sess.Execute();
 	sess.ClearParams();
@@ -33,4 +30,11 @@ shared_ptr<vector<Trip> > TripFactory::GetAllTrips()
 	sess << _T("SELECT * FROM trips ORDER BY id asc");
 	shared_ptr<vector<Trip> > trips = sess.ExecAndFetch<Trip>();
 	return trips;
+}
+
+shared_ptr<Trip> TripFactory::GetById(int id)
+{
+	Session sess;
+	sess << _T("SELECT * FROM trips WHERE id = ?") << Param(id);
+	return sess.Get<Trip>();
 }

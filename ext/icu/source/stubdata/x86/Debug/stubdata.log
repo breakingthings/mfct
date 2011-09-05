@@ -1,5 +1,3 @@
 ﻿  stubdata.c
-C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(D:\Projects\mfct\ext\icu\source\stubdata\.\x86\Debug\stubdata.dll) does not match the Linker's OutputFile property value (D:\Projects\mfct\ext\icu\bin\icudt48.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
-C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(stubdata) does not match the Linker's OutputFile property value (icudt48). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
      Creating library ..\..\lib\icudt.lib and object ..\..\lib\icudt.exp
-  stubdata.vcxproj -> D:\Projects\mfct\ext\icu\source\stubdata\.\x86\Debug\stubdata.dll
+  stubdata.vcxproj -> D:\Projects\mfct\ext\icu\source\stubdata\.\x86\Debug\icudt48.dll

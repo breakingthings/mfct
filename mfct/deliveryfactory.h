@@ -5,14 +5,16 @@
 #include "customer.h"
 #include "session.h"
 
+using namespace std;
+
 class DeliveryFactory
 {
 public:
 	DeliveryFactory(void);
 	~DeliveryFactory(void);
-	static void AddDelivery(const Trip &trip, const Customer &customer, const Delivery &delivery);
-
-	
+	static void AddDelivery(shared_ptr<Trip> trip, shared_ptr<Customer> customer,const CString &name, 
+	const CString &unit, int quantity, double price, double total);
+	static shared_ptr<vector<Delivery> > GetDeliveries(int trip_id);
 };
 
 #endif
