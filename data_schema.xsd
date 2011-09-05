@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://mfctest.com"
+    elementFormDefault="qualified"
+    xmlns="http://mfctest.com"
+    xmlns:mstns="http://mfctest.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="data">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="trip_type" name="trip"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+    <xs:complexType name="trip_type">
+      <xs:sequence>
+        <xs:element name="delivery" type="delivery_type" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  
+  <xs:complexType name="delivery_item_type">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="unit" type="xs:string"/>
+      <xs:element name="quantity" type="xs:integer"/>
+      <xs:element name="price" type="xs:double"/>
+      <xs:element name="total" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="delivery_type">
+    <xs:sequence>
+      <xs:element name="delivery_item"  type="delivery_item_type" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="customer_name" type="xs:string" use="required"/>
+    <xs:attribute name="address" type="xs:string" use="required"/>
+  </xs:complexType>
+
+ 
+</xs:schema>
