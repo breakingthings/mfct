@@ -13,10 +13,11 @@ void DeliveryFactory::AddDelivery(shared_ptr<Trip> trip, shared_ptr<Customer> cu
 	
 }
 
-shared_ptr<vector<Delivery> > DeliveryFactory::GetDeliveries(int trip_id)
+shared_ptr<vector<Delivery> > DeliveryFactory::GetDeliveries(int trip_id, int customer_id)
 {
 	Session sess;
-	sess << _T("SELECT * FROM deliveries WHERE trip_id = ?") << Param(trip_id);
+	sess << _T("SELECT * FROM deliveries WHERE trip_id = ? AND customer_id = ? ORDER BY id ASC") << Param(trip_id) 
+		<< Param(customer_id);
 	return sess.ExecAndFetch<Delivery>();
 	
 }

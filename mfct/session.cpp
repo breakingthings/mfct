@@ -58,8 +58,6 @@ sqlite3_stmt *Session::_PrepareAndBind()
 		m_handle_open = true;
 	}
 
-
-
 	sqlite3_stmt *statement;
 
 #ifdef UNICODE
@@ -116,7 +114,7 @@ void Session::_BindParameter(sqlite3_stmt *statement, const Param &param, int po
 		result = sqlite3_bind_int(statement, position, *((int*)param.GetValue()));
 		break;
 	default:
-		result = sqlite3_bind_double(statement, position, *((float*)param.GetValue()));
+		result = sqlite3_bind_double(statement, position, *((double*)param.GetValue()));
 		break;
 	}
 
@@ -162,10 +160,11 @@ void Session::_MapResultColumnsToObject(ObjectBase *oPtr, sqlite3_stmt *statemen
 #else
 		column_name = sqlite3_column_name(statement, x);
 #endif
+		
 		if(oPtr->GetMap().PLookup(column_name) == NULL)
 		{
 			delete oPtr;
-			continue;
+			return;
 		}
 
 		VarInfo p(oPtr->GetMap().PLookup(column_name)->value);

@@ -71,7 +71,7 @@ public:
 
 		sqlite3_stmt *statement = this->_PrepareAndBind();
 		
-		int cols;
+		//int cols;
 		bool is_first_result = true;
 		while(1)
 		{

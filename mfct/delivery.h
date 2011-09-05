@@ -15,7 +15,9 @@ public:
 	int id;
 	CString name;
 	CString unit;
-	CString quantity;
+	int customer_id;
+	int trip_id;
+	int quantity;
 	double price;
 	double total;
 

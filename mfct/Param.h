@@ -7,12 +7,11 @@ class Param
 {
 public:
 
-	enum ParamType { TYPE_INT, TYPE_DOUBLE, TYPE_FLOAT, TYPE_TCHAR, TYPE_STRING };
+	enum ParamType { TYPE_INT, TYPE_DOUBLE, TYPE_TCHAR, TYPE_STRING };
 	Param(const Param &param);
 	Param(int value);
 	Param(const TCHAR *value);
 	Param(double value);
-	Param(float value);
 	ParamType GetType() const;
 	const void *GetValue() const;
 	Param &operator=(const Param &T);

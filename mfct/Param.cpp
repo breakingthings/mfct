@@ -23,14 +23,6 @@ Param::Param(double value)
 	this->m_type = TYPE_DOUBLE;
 }
 
-Param::Param(float value)
-{
-	this->m_value = new float(1);
-	this->m_instance_count = new int(1);
-	*((float*)m_value) = value;
-	this->m_type = TYPE_FLOAT;
-}
-
 Param::Param(const TCHAR *value)
 {
 	size_t size = _tcslen(value) * sizeof(TCHAR) + sizeof(TCHAR);

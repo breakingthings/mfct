@@ -27,7 +27,7 @@ shared_ptr<Trip> TripFactory::AddTrip()
 shared_ptr<vector<Trip> > TripFactory::GetAllTrips()
 {
 	Session sess;
-	sess << _T("SELECT * FROM trips ORDER BY id asc");
+	sess << _T("SELECT * FROM trips ORDER BY id ASC");
 	shared_ptr<vector<Trip> > trips = sess.ExecAndFetch<Trip>();
 	return trips;
 }
