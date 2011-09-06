@@ -13,12 +13,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "i18n", "ext\icu\source\i18n
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XercesLib", "ext\xerces-c\projects\Win32\VC10\xerces-all\XercesLib\XercesLib.vcxproj", "{152CE948-F659-4206-A50A-1D2B9658EF96}"
 EndProject
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject1", "ModelingProject1\ModelingProject1.modelproj", "{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B5180421-5066-4CA3-8E09-2F11EFAE0DB6}"
-	ProjectSection(SolutionItems) = preProject
-		C:\Users\andri\Desktop\mfct.vsd = C:\Users\andri\Desktop\mfct.vsd
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -288,42 +283,6 @@ Global
 		{152CE948-F659-4206-A50A-1D2B9658EF96}.Static Release|Win32.Build.0 = Static Release|Win32
 		{152CE948-F659-4206-A50A-1D2B9658EF96}.Static Release|x64.ActiveCfg = Static Release|x64
 		{152CE948-F659-4206-A50A-1D2B9658EF96}.Static Release|x64.Build.0 = Static Release|x64
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Debug|Win32.ActiveCfg = Debug|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.ICU Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.ICU Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.ICU Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.ICU Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.ICU Debug|Win32.ActiveCfg = Debug|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.ICU Debug|x64.ActiveCfg = Debug|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.ICU Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.ICU Release|Any CPU.Build.0 = Release|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.ICU Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.ICU Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.ICU Release|Win32.ActiveCfg = Release|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.ICU Release|x64.ActiveCfg = Release|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Release|Win32.ActiveCfg = Release|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Release|x64.ActiveCfg = Release|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Static Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Static Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Static Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Static Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Static Debug|Win32.ActiveCfg = Debug|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Static Debug|x64.ActiveCfg = Debug|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Static Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Static Release|Any CPU.Build.0 = Release|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Static Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Static Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Static Release|Win32.ActiveCfg = Release|Any CPU
-		{2CB91E50-FCA8-4A2C-9B22-F212B9EDB2E4}.Static Release|x64.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
