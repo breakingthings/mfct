@@ -9,7 +9,7 @@ BOOL MainDialog::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 
-	this->InitColumns();
+	this->InitColumns();	
 	this->BindTrips();
 	return TRUE;
 }
