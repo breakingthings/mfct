@@ -36,12 +36,31 @@ class Session
 public:
 	Session(void);
 	~Session(void);
+	/**
+	* Adds statement which is to be executed
+	*/
 	Session &operator <<(const TCHAR *statement);
+	/**
+	* Adds bound parameter
+	* @param parameter Parameter
+	*/
 	Session &operator <<(const Param &parameter);
+	/**
+	* Execute the statement without result
+	*/
 	void Execute();
+	/**
+	* Clear stored parameters list
+	*/
 	void ClearParams();
+	/**
+	* Get single result integer
+	*/
 	int GetInt();
 
+	/*
+	* Maps result to business object of base ObjectBase
+	*/
 	template <typename T>
 	typename std::enable_if<std::is_base_of<ObjectBase, T>::value, shared_ptr<T> >::type 
 	Get()
@@ -61,7 +80,9 @@ public:
 		return objPtr;
 	}
 
-	
+	/*
+	* Maps result to vector of business objects of base ObjectBase
+	*/
 	template <typename T>
 	typename enable_if<is_base_of<ObjectBase, T>::value, shared_ptr<vector<T> > >::type 
 	ExecAndFetch()
@@ -105,16 +126,40 @@ public:
 
 	}
 private:
-	void _MapResultColumnsToObject(ObjectBase *oPtr, sqlite3_stmt *statement);
-
-	sqlite3_stmt *_PrepareAndBind();
-	Session &operator=(Session const &);
+	/**
+	* Container for Parameter items
+	*/
 	list<Param> m_list_parameters;
+	/**
+	* Holds statement
+	*/
 	CString m_statement;
-	void _BindParameter(sqlite3_stmt *statement, const Param &param, int position);
-	void _HandleResult(int result_code) const;
+	/**
+	* SQLITE handle
+	*/
 	sqlite3 *m_dbHandle;
 	bool m_handle_open;
+private:
+	/**
+	* Maps sql result columns to Business object
+	*/
+	void _MapResultColumnsToObject(ObjectBase *oPtr, sqlite3_stmt *statement);
+	
+	/**
+	* Prepares statement and binds stored Parameters to statement
+	*/
+	sqlite3_stmt *_PrepareAndBind();
+
+	Session &operator=(Session const &);
+	/**
+	* Binds Parameter to position
+	*/
+	void _BindParameter(sqlite3_stmt *statement, const Param &param, int position);
+	/**
+	* Handles SQLITE result codes - throws CString containing sqlite error message
+	*/
+	void _HandleResult(int result_code) const;
+	
 };
 
 #endif

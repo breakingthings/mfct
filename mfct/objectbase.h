@@ -23,13 +23,23 @@ public:
 	friend class Session;
 	ObjectBase(void);
 	virtual ~ObjectBase(void);
-	//Gets the object map
+	/**
+	* Returns object map (column name to variable pointer)
+	*/
 	virtual const VarInfoMap &GetMap() const = 0;
+	/**
+	* Gets object table name - would be useful if full implementation 
+	*/
 	const CString &GetTableName() const;
 	ObjectBase &operator =(const ObjectBase&);
+	/**
+	* Whether object is loaded or not
+	*/
 	bool IsNull();
 protected:	
-	//contains map of sql result field names to object variable pointers
+	/**
+	* contains map of sql result field names to object variable pointers
+	*/
 	VarInfoMap  m_varmap;
 	CString m_table_name;
 	bool m_is_null;

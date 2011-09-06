@@ -5,6 +5,9 @@ Customer::Customer(const Customer &customer)
 	*this = customer;
 }
 
+/**
+* Customer business object
+*/
 Customer::Customer(void)
 {
 	MAPTABLE("trip");	
