@@ -96,6 +96,7 @@
     <ClCompile Include="maindialog.cpp" />
     <ClCompile Include="objectbase.cpp" />
     <ClCompile Include="Param.cpp" />
+    <ClCompile Include="serializer.cpp" />
     <ClCompile Include="session.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="trip.cpp" />
@@ -112,6 +113,7 @@
     <ClInclude Include="objectbase.h" />
     <ClInclude Include="Param.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="serializer.h" />
     <ClInclude Include="session.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="trip.h" />
