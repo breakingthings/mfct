@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "Param.h"
 
 Param::Param(const Param & param)

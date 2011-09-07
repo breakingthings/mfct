@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "session.h"
 #include "Param.h"
 #include "trip.h"
@@ -9,7 +10,10 @@ Session::Session(void) : m_handle_open(false)
 
 Session::~Session(void)
 {
-	sqlite3_close(m_dbHandle);	
+	if(this->m_handle_open)
+	{
+		sqlite3_close(m_dbHandle);	
+	}
 }
 
 Session &Session::operator <<(const TCHAR *statement)
@@ -152,7 +156,7 @@ void Session::_MapResultColumnsToObject(ObjectBase *oPtr, sqlite3_stmt *statemen
 {
 	int cols = sqlite3_column_count(statement);	
 	TCHAR *column_name;
-
+	CString *pCString;
 	for(int x = 0; x < cols; ++x)
 	{
 #ifdef UNICODE
@@ -161,20 +165,20 @@ void Session::_MapResultColumnsToObject(ObjectBase *oPtr, sqlite3_stmt *statemen
 		column_name = sqlite3_column_name(statement, x);
 #endif
 		
-		if(oPtr->GetMap().PLookup(column_name) == NULL)
+		if(!oPtr->GetMap().count(column_name))
 		{
-			delete oPtr;
 			return;
 		}
 
-		VarInfo p(oPtr->GetMap().PLookup(column_name)->value);
+		VarInfo p(oPtr->GetMap().find(column_name)->second);
 		switch(p.type)
 		{
 		case VarInfo::STRING:
+			pCString = reinterpret_cast<CString*>(p.dataPtr);
 #ifdef UNICODE
-			*((CString*)p.dataPtr) = (TCHAR*)sqlite3_column_text16(statement, x);
+			pCString->Format(_T("%s"),(TCHAR*)sqlite3_column_text16(statement, x));
 #else
-			*((CString*)p.dataPtr) = sqlite3_column_text(statement, x);
+			pCString->Format(_T("%s"),(TCHAR*)sqlite3_column_text(statement, x));
 #endif
 			break;
 		case VarInfo::INT:

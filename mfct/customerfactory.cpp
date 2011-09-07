@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "customerfactory.h"
 #include "session.h"
 

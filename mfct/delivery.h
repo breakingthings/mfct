@@ -6,12 +6,12 @@
 class Delivery : public ObjectBase
 {
 public:
+	IS_OBJECT
 	Delivery(const Delivery&);
 	Delivery(void);
 	~Delivery(void);
 	Delivery &operator =(const Delivery&);
-	const VarInfoMap &GetMap() const;
-	
+		
 	int id;
 	CString name;
 	CString unit;

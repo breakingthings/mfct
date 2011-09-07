@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "session.h"
 #include "TripFactory.h"
 
@@ -36,5 +37,7 @@ shared_ptr<Trip> TripFactory::GetById(int id)
 {
 	Session sess;
 	sess << _T("SELECT * FROM trips WHERE id = ?") << Param(id);
-	return sess.Get<Trip>();
+	shared_ptr<Trip> t = sess.Get<Trip>();
+	return t;
 }
+

@@ -7,13 +7,12 @@ using namespace std;
 class Trip : public ObjectBase
 {
 public:
+	IS_OBJECT
 	Trip(const Trip&);
 	Trip(void);
 	~Trip(void);
 	Trip &operator =(const Trip&);
-	const VarInfoMap &GetMap() const;
 	int id;
-	int status;
 	int deleted;
 };
 

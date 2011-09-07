@@ -1,10 +1,11 @@
+#include "stdafx.h"
 #include "objectbase.h"
 
 ObjectBase::ObjectBase(void)
 {
 	m_is_null = true;
+	
 }
-
 
 ObjectBase::~ObjectBase(void)
 {
@@ -28,4 +29,9 @@ ObjectBase &ObjectBase::operator =(const ObjectBase& other)
 	}
 
 	return *this;
+}
+
+const VarInfoMap &ObjectBase::GetMap() const
+{
+	return this->m_varmap;
 }

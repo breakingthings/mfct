@@ -25,6 +25,7 @@ public:
 	* \return shared_ptr to Trip object
 	*/
 	static shared_ptr<Trip> GetById(int id);
+	
 private:
 	TripFactory &operator=(TripFactory const &);
 };

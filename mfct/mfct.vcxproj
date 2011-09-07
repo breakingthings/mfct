@@ -47,15 +47,15 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>SQLITE_ENABLE_RTREE;SQLITE_ENABLE_COLUMN_METADATA;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PreprocessToFile>false</PreprocessToFile>
       <AdditionalIncludeDirectories>$(ProjectDir)..\ext\sqlite3;$(ProjectDir)..\ext\xerces-c\src; %(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <MinimalRebuild>true</MinimalRebuild>
+      <PrecompiledHeader>Use</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -88,6 +88,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CGridListCtrlEx\CGridColumnTraitCombo.cpp" />
+    <ClCompile Include="CGridListCtrlEx\CGridColumnTraitDateTime.cpp" />
+    <ClCompile Include="CGridListCtrlEx\CGridColumnTraitEdit.cpp" />
+    <ClCompile Include="CGridListCtrlEx\CGridColumnTraitImage.cpp" />
+    <ClCompile Include="CGridListCtrlEx\CGridColumnTraitText.cpp" />
+    <ClCompile Include="CGridListCtrlEx\CGridListCtrlEx.cpp" />
+    <ClCompile Include="CGridListCtrlEx\CGridListCtrlGroups.cpp" />
+    <ClCompile Include="CGridListCtrlEx\CGridRowTraitText.cpp" />
+    <ClCompile Include="CGridListCtrlEx\CGridRowTraitXP.cpp" />
+    <ClCompile Include="CGridListCtrlEx\ViewConfigSection.cpp" />
     <ClCompile Include="customer.cpp" />
     <ClCompile Include="customerfactory.cpp" />
     <ClCompile Include="delivery.cpp" />
@@ -98,17 +108,34 @@
     <ClCompile Include="Param.cpp" />
     <ClCompile Include="serializer.cpp" />
     <ClCompile Include="session.cpp" />
-    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="trip.cpp" />
     <ClCompile Include="tripfactory.cpp" />
     <ClCompile Include="varinfo.cpp" />
     <ClCompile Include="xmlimporter.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CGridListCtrlEx\CGridColumnTrait.h" />
+    <ClInclude Include="CGridListCtrlEx\CGridColumnTraitCombo.h" />
+    <ClInclude Include="CGridListCtrlEx\CGridColumnTraitDateTime.h" />
+    <ClInclude Include="CGridListCtrlEx\CGridColumnTraitEdit.h" />
+    <ClInclude Include="CGridListCtrlEx\CGridColumnTraitImage.h" />
+    <ClInclude Include="CGridListCtrlEx\CGridColumnTraitText.h" />
+    <ClInclude Include="CGridListCtrlEx\CGridColumnTraitVisitor.h" />
+    <ClInclude Include="CGridListCtrlEx\CGridListCtrlEx.h" />
+    <ClInclude Include="CGridListCtrlEx\CGridListCtrlGroups.h" />
+    <ClInclude Include="CGridListCtrlEx\CGridRowTrait.h" />
+    <ClInclude Include="CGridListCtrlEx\CGridRowTraitText.h" />
+    <ClInclude Include="CGridListCtrlEx\CGridRowTraitVisitor.h" />
+    <ClInclude Include="CGridListCtrlEx\CGridRowTraitXP.h" />
+    <ClInclude Include="CGridListCtrlEx\ViewConfigSection.h" />
     <ClInclude Include="customer.h" />
     <ClInclude Include="customerfactory.h" />
     <ClInclude Include="delivery.h" />
     <ClInclude Include="deliveryfactory.h" />
+    <ClInclude Include="globals.h" />
     <ClInclude Include="maindialog.h" />
     <ClInclude Include="objectbase.h" />
     <ClInclude Include="Param.h" />

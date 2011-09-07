@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "trip.h"
 
 
@@ -12,8 +13,6 @@ Trip::Trip(void)
 	MAPTABLE("trip");	
 	MAPCOLUMN("id", &id, VarInfo::INT);
 	MAPCOLUMN("deleted", &deleted, VarInfo::INT);
-
-	
 }
 
 
@@ -33,7 +32,3 @@ Trip &Trip::operator =(const Trip &other)
 	return *this;
 }
 
-const VarInfoMap &Trip::GetMap() const
-{
-	return this->m_varmap;
-}

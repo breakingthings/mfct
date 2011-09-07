@@ -1,4 +1,6 @@
+#include "stdafx.h"
 #include "customer.h"
+
 
 Customer::Customer(const Customer &customer)
 {
@@ -34,8 +36,4 @@ Customer &Customer::operator =(const Customer &other)
 	return *this;
 }
 
-const VarInfoMap &Customer::GetMap() const
-{
-	return this->m_varmap;
-}
 

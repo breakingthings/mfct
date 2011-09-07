@@ -1,8 +1,9 @@
+#include "stdafx.h"
 #include "delivery.h"
 
-Delivery::Delivery(const Delivery &T)
+Delivery::Delivery(const Delivery &delivery)
 {
-	*this = T;
+	*this = delivery;
 }
 
 Delivery::Delivery(void)
@@ -39,9 +40,4 @@ Delivery &Delivery::operator =(const Delivery &other)
 	}
 
 	return *this;
-}
-
-const VarInfoMap &Delivery::GetMap() const
-{
-	return this->m_varmap;
 }

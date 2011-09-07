@@ -68,15 +68,13 @@ public:
 		sqlite3_stmt *statement = this->_PrepareAndBind();
 		int result = sqlite3_step(statement);
 
-		 shared_ptr<T> objPtr = shared_ptr<T>(new T);
-
+		shared_ptr<T> objPtr = shared_ptr<T>(new T);
 		if (result == SQLITE_ROW) {
 			this->_MapResultColumnsToObject(objPtr.get(), statement);
 		}
-
+		
 		sqlite3_reset(statement);
 		sqlite3_finalize(statement);
-
 		return objPtr;
 	}
 
@@ -101,12 +99,13 @@ public:
 			if (result == SQLITE_ROW) {
 
 
-				ObjectBase* oPtr(new T);
-				_MapResultColumnsToObject(oPtr, statement);
+				T t;
+				//ObjectBase* oPtr = new T;
+				_MapResultColumnsToObject(&t, statement);
 
-				T *oo = static_cast<T*>(oPtr); 
-				resultVector.get()->push_back(*oo);
-				delete oo;
+				//T *oo = (oPtr); 
+				resultVector->push_back(t);
+				
 
 
 			} else if (result == SQLITE_DONE)
