@@ -102,11 +102,11 @@
     <ClCompile Include="customerfactory.cpp" />
     <ClCompile Include="delivery.cpp" />
     <ClCompile Include="deliveryfactory.cpp" />
+    <ClCompile Include="globals.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="maindialog.cpp" />
     <ClCompile Include="objectbase.cpp" />
     <ClCompile Include="Param.cpp" />
-    <ClCompile Include="serializer.cpp" />
     <ClCompile Include="session.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -114,6 +114,7 @@
     <ClCompile Include="trip.cpp" />
     <ClCompile Include="tripfactory.cpp" />
     <ClCompile Include="varinfo.cpp" />
+    <ClCompile Include="xmlexporter.cpp" />
     <ClCompile Include="xmlimporter.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -140,12 +141,12 @@
     <ClInclude Include="objectbase.h" />
     <ClInclude Include="Param.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="serializer.h" />
     <ClInclude Include="session.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="trip.h" />
     <ClInclude Include="tripfactory.h" />
     <ClInclude Include="varinfo.h" />
+    <ClInclude Include="xmlexporter.h" />
     <ClInclude Include="xmlimporter.h" />
   </ItemGroup>
   <ItemGroup>

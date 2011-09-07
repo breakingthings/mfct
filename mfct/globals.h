@@ -15,4 +15,7 @@ namespace std
 #endif
 }
 
+extern HMODULE GetCurrentModule(void);
+
+
 #endif

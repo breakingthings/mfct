@@ -5,7 +5,6 @@
 class Customer : public ObjectBase
 {
 public:
-	IS_OBJECT
 	Customer(const Customer&);
 	Customer(void);
 	~Customer(void);

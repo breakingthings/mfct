@@ -19,8 +19,6 @@ typedef unordered_map<tstring, VarInfo> VarInfoMap;
 //#define MAPCOLUMN(a, b, c) this->m_varmap->SetAt(_T(a), VarInfo(b,c));
 #define MAPCOLUMN(a, b, c) this->m_varmap.insert(make_pair<tstring, VarInfo>(tstring(_T(a)), VarInfo(b,c)));
 
-#define IS_OBJECT void IsObjectBaseObject(){};
-
 class ObjectBase
 {
 	
@@ -38,7 +36,6 @@ public:
 	* Whether object is loaded or not
 	*/
 	bool IsNull();
-	virtual void IsObjectBaseObject() = 0;
 protected:	
 	/**
 	* Returns object map (column name to variable pointer)

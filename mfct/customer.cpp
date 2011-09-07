@@ -36,4 +36,3 @@ Customer &Customer::operator =(const Customer &other)
 	return *this;
 }
 
-

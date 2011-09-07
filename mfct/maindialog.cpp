@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "maindialog.h"
+#include "xmlexporter.h"
 
 MainDialog::MainDialog(CWnd* parent) : CDialogEx(MainDialog::IDD, parent), 
 	m_quantity_text(_T(""))
@@ -100,13 +101,13 @@ void MainDialog::BindTrips()
 	if(trips->size() > 0)
 	{
 		int id = trips->at(0).id;
-#ifdef _DEBUG
+/*#ifdef _DEBUG
 		CMemoryState oldMemState, newMemState, diffMemState;
 		oldMemState.Checkpoint();
-#endif
+#endif*/
 
  		this->BindTripCustomers(id);
-
+/*
 #ifdef _DEBUG
 		newMemState.Checkpoint();
 		if( diffMemState.Difference( oldMemState, newMemState ) )
@@ -114,7 +115,7 @@ void MainDialog::BindTrips()
 			TRACE( "Memory leaked!\n" );
 			_CrtDumpMemoryLeaks();
 		}
-#endif
+#endif*/
 		
 	}
 	
@@ -294,4 +295,35 @@ BEGIN_MESSAGE_MAP( MainDialog, CDialogEx)
 	ON_NOTIFY(LVN_ITEMCHANGED, IDC_CUSTOMERS, &MainDialog::OnLvnItemchangedCustomers)
 	ON_NOTIFY(LVN_ENDLABELEDIT, IDC_DELIVERY_ITEMS, &MainDialog::OnLvnEndLabelEdit)
 	ON_NOTIFY(LVN_BEGINLABELEDIT, IDC_DELIVERY_ITEMS, &MainDialog::OnLvnStartLabelEdit)
+	ON_COMMAND(ID_FILE_EXPORT, &MainDialog::OnFileExport)
 END_MESSAGE_MAP()
+
+
+void MainDialog::OnFileExport()
+{
+
+	CFileDialog fOpenDlg(TRUE, _T("xml"), _T(""), OFN_OVERWRITEPROMPT, 
+		_T("xml files (*.xml)|*.xml|"), this);
+
+	fOpenDlg.m_pOFN->lpstrInitialDir= _T("c:");
+
+	if(fOpenDlg.DoModal()==IDOK)
+	{
+	
+	try
+	{
+		XMLExporter ex((LPCTSTR)fOpenDlg.GetPathName());
+		shared_ptr<vector<Trip> > trips = TripFactory::GetAllTrips();
+		vector<Trip>::iterator i;
+		i = trips->begin();
+		while(i != trips->end())
+		{
+			ex.ExportTrip(*i);
+			i++;
+		}
+	} catch (const CString &msg)
+	{
+		this->ShowErrorMsg(msg);
+	}
+	}
+}

@@ -29,7 +29,7 @@ class Param {
 	* @return pointer to value of parameter
 	*/
 	const void * GetValue() const;
-	Param & operator =(const Param & T);
+	Param &operator =(const Param &other);
 	~Param(void );
   private:
 	ParamType m_type;

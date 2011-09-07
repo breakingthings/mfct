@@ -89,6 +89,7 @@ public:
 	CGridListCtrlGroups m_GridListCustomers;
 	CGridListCtrlGroups m_GridListDeliveryItems;
 	
+	afx_msg void OnFileExport();
 };
 
 

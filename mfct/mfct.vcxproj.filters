@@ -60,9 +60,6 @@
     <ClCompile Include="maindialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="serializer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CGridListCtrlEx\CGridColumnTraitCombo.cpp">
       <Filter>CGridListCtrlEx</Filter>
     </ClCompile>
@@ -92,6 +89,12 @@
     </ClCompile>
     <ClCompile Include="CGridListCtrlEx\ViewConfigSection.cpp">
       <Filter>CGridListCtrlEx</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlexporter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="globals.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -137,9 +140,6 @@
     <ClInclude Include="maindialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="serializer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CGridListCtrlEx\CGridColumnTrait.h">
       <Filter>CGridListCtrlEx</Filter>
     </ClInclude>
@@ -183,6 +183,9 @@
       <Filter>CGridListCtrlEx</Filter>
     </ClInclude>
     <ClInclude Include="globals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlexporter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
