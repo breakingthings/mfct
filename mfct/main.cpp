@@ -1,8 +1,10 @@
 #include "stdafx.h"
 #include "maindialog.h"
+#ifdef _DEBUG
 #define _CRTDBG_MAP_ALLOC
 #include <stdlib.h>
 #include <crtdbg.h>
+#endif
 
 class MyApp : public CWinApp
 {
@@ -10,7 +12,9 @@ class MyApp : public CWinApp
 public:
 	MyApp()
 	{
+#ifdef _DEBUG
 		_CrtSetDbgFlag ( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );
+#endif
 	}
 
 	~MyApp()
