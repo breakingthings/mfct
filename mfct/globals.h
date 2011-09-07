@@ -7,11 +7,11 @@
 namespace std
 {
 #ifdef _UNICODE
-    typedef std::wstring tstring;
-#define tcout std::wcout
+    typedef wstring tstring;
+#define tcout wcout
 #else
-	typedef std::cout tcout;
-#define tcout std::cout
+	typedef string tstring;
+#define tcout cout
 #endif
 }
 
