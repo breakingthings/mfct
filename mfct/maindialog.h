@@ -4,12 +4,12 @@
 #include <vector>
 #include "resource.h"
 #include <tripfactory.h>
-#include "xmlimporter.h"
+#include <xmlimporter.h>
+#include <xmlexporter.h>
 #include <deliveryfactory.h>
 #include "customerfactory.h"
 #include "CGridListCtrlEx\CGridListCtrlGroups.h"
 #include "CGridListCtrlEx\CGridColumnTraitEdit.h"
-#include "d:\projects\mfct\mfct\cgridlistctrlex\cgridlistctrlgroups.h"
 
 using namespace std;
 
