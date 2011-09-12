@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3488CEB6-EFAC-42D0-B2C9-FE9FA5148431}</ProjectGuid>
+    <RootNamespace>DAO</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../sqlite3;../xerces-c/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ext\sqlite3\sqlite3.vcxproj">
+      <Project>{e7b4c7b2-3292-49c7-8040-ea44f694ce7a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\xerces-c\projects\Win32\VC10\xerces-all\XercesLib\XercesLib.vcxproj">
+      <Project>{152ce948-f659-4206-a50a-1d2b9658ef96}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="customer.cpp" />
+    <ClCompile Include="customerfactory.cpp" />
+    <ClCompile Include="delivery.cpp" />
+    <ClCompile Include="deliveryfactory.cpp" />
+    <ClCompile Include="globals.cpp" />
+    <ClCompile Include="objectbase.cpp" />
+    <ClCompile Include="param.cpp" />
+    <ClCompile Include="session.cpp" />
+    <ClCompile Include="trip.cpp" />
+    <ClCompile Include="TripFactory.cpp" />
+    <ClCompile Include="varinfo.cpp" />
+    <ClCompile Include="xmlexporter.cpp" />
+    <ClCompile Include="xmlimporter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="customer.h" />
+    <ClInclude Include="customerfactory.h" />
+    <ClInclude Include="delivery.h" />
+    <ClInclude Include="deliveryfactory.h" />
+    <ClInclude Include="globals.h" />
+    <ClInclude Include="objectbase.h" />
+    <ClInclude Include="param.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="session.h" />
+    <ClInclude Include="trip.h" />
+    <ClInclude Include="tripfactory.h" />
+    <ClInclude Include="varinfo.h" />
+    <ClInclude Include="xmlexporter.h" />
+    <ClInclude Include="xmlimporter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xsd Include="..\..\data_schema.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DAO.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
