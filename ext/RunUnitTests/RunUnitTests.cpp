@@ -14,7 +14,7 @@ using namespace DLL;
 
 TEST(XmlExporter, export_xml)
 {
-
+	//Get testrunner app path
 	TCHAR  appPath[MAX_PATH] = _T("");
 	CString xmlFile;
 	GetModuleFileName(0, appPath, sizeof(appPath) - 1);
