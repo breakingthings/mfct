@@ -24,39 +24,6 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="session.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Param.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tripfactory.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="trip.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="objectbase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="delivery.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="varinfo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="xmlimporter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="deliveryfactory.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="customer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="customerfactory.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="maindialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -90,51 +57,12 @@
     <ClCompile Include="CGridListCtrlEx\ViewConfigSection.cpp">
       <Filter>CGridListCtrlEx</Filter>
     </ClCompile>
-    <ClCompile Include="xmlexporter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="globals.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="session.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Param.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tripfactory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="trip.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="objectbase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="delivery.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="varinfo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="xmlimporter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="deliveryfactory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="customer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="customerfactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="maindialog.h">
@@ -182,15 +110,12 @@
     <ClInclude Include="CGridListCtrlEx\ViewConfigSection.h">
       <Filter>CGridListCtrlEx</Filter>
     </ClInclude>
-    <ClInclude Include="globals.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="xmlexporter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="mfct.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="..\ext\DAO\DAO.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>

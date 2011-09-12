@@ -3,9 +3,9 @@
 #include <map>
 #include <vector>
 #include "resource.h"
-#include "tripfactory.h"
+#include <tripfactory.h>
 #include "xmlimporter.h"
-#include "deliveryfactory.h"
+#include <deliveryfactory.h>
 #include "customerfactory.h"
 #include "CGridListCtrlEx\CGridListCtrlGroups.h"
 #include "CGridListCtrlEx\CGridColumnTraitEdit.h"

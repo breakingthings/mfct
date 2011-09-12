@@ -2,6 +2,9 @@
 #include "maindialog.h"
 #include "xmlexporter.h"
 
+using namespace DLL;
+using namespace BLL;
+
 MainDialog::MainDialog(CWnd* parent) : CDialogEx(MainDialog::IDD, parent), 
 	m_quantity_text(_T(""))
 {
@@ -250,7 +253,6 @@ void MainDialog::BindTripDeliveries()
 
 void MainDialog::BindTripDeliveries(int trip_id, int customer_id)
 {
-	
 	
 	this->m_GridListDeliveryItems.DeleteAllItems();
 	shared_ptr<vector<Delivery> > deliveries = DeliveryFactory::GetDeliveries(trip_id, customer_id);

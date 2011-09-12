@@ -41,6 +41,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(IncludePath)</IncludePath>
+    <CustomBuildBeforeTargets>
+    </CustomBuildBeforeTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -52,7 +54,7 @@
       <PreprocessorDefinitions>SQLITE_ENABLE_RTREE;SQLITE_ENABLE_COLUMN_METADATA;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PreprocessToFile>false</PreprocessToFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\ext\sqlite3;$(ProjectDir)..\ext\xerces-c\src; %(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\ext\sqlite3;$(ProjectDir)..\ext\xerces-c\src; ..\ext\DAO;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>false</MultiProcessorCompilation>
       <MinimalRebuild>true</MinimalRebuild>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -68,7 +70,23 @@
     <CustomBuildStep>
       <Command>
       </Command>
+      <Message>
+      </Message>
     </CustomBuildStep>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>"$(SolutionDir)$(Configuration)\rununittests.exe"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Run unit tests</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -98,24 +116,11 @@
     <ClCompile Include="CGridListCtrlEx\CGridRowTraitText.cpp" />
     <ClCompile Include="CGridListCtrlEx\CGridRowTraitXP.cpp" />
     <ClCompile Include="CGridListCtrlEx\ViewConfigSection.cpp" />
-    <ClCompile Include="customer.cpp" />
-    <ClCompile Include="customerfactory.cpp" />
-    <ClCompile Include="delivery.cpp" />
-    <ClCompile Include="deliveryfactory.cpp" />
-    <ClCompile Include="globals.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="maindialog.cpp" />
-    <ClCompile Include="objectbase.cpp" />
-    <ClCompile Include="Param.cpp" />
-    <ClCompile Include="session.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="trip.cpp" />
-    <ClCompile Include="tripfactory.cpp" />
-    <ClCompile Include="varinfo.cpp" />
-    <ClCompile Include="xmlexporter.cpp" />
-    <ClCompile Include="xmlimporter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CGridListCtrlEx\CGridColumnTrait.h" />
@@ -132,27 +137,21 @@
     <ClInclude Include="CGridListCtrlEx\CGridRowTraitVisitor.h" />
     <ClInclude Include="CGridListCtrlEx\CGridRowTraitXP.h" />
     <ClInclude Include="CGridListCtrlEx\ViewConfigSection.h" />
-    <ClInclude Include="customer.h" />
-    <ClInclude Include="customerfactory.h" />
-    <ClInclude Include="delivery.h" />
-    <ClInclude Include="deliveryfactory.h" />
-    <ClInclude Include="globals.h" />
     <ClInclude Include="maindialog.h" />
-    <ClInclude Include="objectbase.h" />
-    <ClInclude Include="Param.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="session.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="trip.h" />
-    <ClInclude Include="tripfactory.h" />
-    <ClInclude Include="varinfo.h" />
-    <ClInclude Include="xmlexporter.h" />
-    <ClInclude Include="xmlimporter.h" />
   </ItemGroup>
   <ItemGroup>
+    <ResourceCompile Include="..\ext\DAO\DAO.rc" />
     <ResourceCompile Include="mfct.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ext\DAO\DAO.vcxproj">
+      <Project>{3488ceb6-efac-42d0-b2c9-fe9fa5148431}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ext\RunUnitTests\RunUnitTests.vcxproj">
+      <Project>{6c052abe-df3b-46af-8503-1b2d6f95458c}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\ext\sqlite3\sqlite3.vcxproj">
       <Project>{e7b4c7b2-3292-49c7-8040-ea44f694ce7a}</Project>
       <Private>true</Private>
